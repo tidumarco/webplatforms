@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+        .scroll-hidden {
+        display: none;
+        }
+
+        .scroll-visible {
+            padding: 20px;
+            margin: 380px 0 0 40px;
+            border: 2px solid;
+            background-color: white;
+            float: left;
+            position: fixed;
+        }
+    </style>
+    <title>My Projects</title>
+</head>
+<body>
+    
+    <div class="row" id="projects">
+        <div class="col-sm-4" style="background-color:lavender;"><a class="active" href="index.html">Home</a></div>
+        <div class="col-sm-4" style="background-color:lavenderblush;"><a href="skills.html">Skills</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="projects.html">Projects</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="gallery.html">Gallery</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="contact.html">Contact</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="music.html">Music</a></div>
+    </div>
+    <div class="container-fluid bg-1 text-center">
+        <div>
+            <p id="scroll" class="scroll-hidden">Aha! I see you scrolling!</p>
+        </div>
+        <h1>My Projects</h1>
+        <hr>
+        <p>Remote door opener in Raspberry Pi environment (Python) <br><img src="Images/projects/door.png" id="first-project" width="600" height=auto></pi><hr>
+        <p>Simple web server (Express.js) <br><img src="images/projects/server.png" width="600" height=auto></p><hr>
+        <p>Rock-Paper-Scissors game (C) <br><img src="images/projects/game.png" width="600" height=auto></p><hr>
+    </div>
+    <script>
+        //SCROLLING FUNCTION
+        document.onscroll = function() {
+            var floatingBox = document.getElementById('scroll')
+            floatingBox.className = "scroll-visible";
+        }
+
+        //HOVERING POPUP WINDOW
+        const myParagraph = document.getElementById('first-project');
+
+        myParagraph.addEventListener('mouseover',e => {
+            window.alert('You moved your mouse on my first project!');
+        });
+
+        //ON LOAD POPUP WINDOW
+        window.addEventListener('load',(event) => {
+        alert('Page loaded succesfully!');
+        });
+
+    </script>
+</body>
+</html>

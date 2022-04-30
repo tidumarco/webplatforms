@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Skills</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-4" style="background-color:lavender;"><a class="active" href="index.html">Home</a></div>
+        <div class="col-sm-4" style="background-color:lavenderblush;"><a href="skills.html">Skills</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="projects.html">Projects</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="gallery.html">Gallery</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="contact.html">Contact</a></div>
+        <div class="col-sm-4" style="background-color:lavender;"><a href="music.html">Music</a></div>
+    </div>
+    <div class="container-fluid bg-1 text-center">
+        <h1>My Skills</h1>
+        <ul id="myList">
+            <li>Guitar<br><img src="images/skills/MarcoRock.jpeg" width="600" height=auto></li>
+            <li>Programming<br><img src="images/skills/programming.jpg" width="600" height=auto></li>
+            <li>Personal Training<br><img src="images/skills/training.jpg" width="600" height=auto></li>
+        </ul>
+        <hr>
+        <input type="text" id="skills"/>
+        <button class="button" onclick="addItem()">add skill</button>
+        <p>Here is my CV, please choose your desired format:<br> 
+        <a href="Files/Resume-Marco-Tidu.pdf"><img src="images/skills/pdf.png" width="50" height=auto></a>
+        <a href="Files/resume-doc.docx"><img src="images/skills/doc.png" width="50" height=auto></a><p>
+        
+    </div>
+    <script>
+        function addItem(){
+            var li = document.createElement("li");
+
+            var skills = document.getElementById("skills");
+            li.appendChild(document.createTextNode(skills.value));
+
+            var ul = document.getElementById("myList");
+            ul.insertBefore(li, ul.firstChild);
+
+            ul.removeChild(ul.lastElementChild);
+
+        }
+    </script>
+</body>
+</html>
